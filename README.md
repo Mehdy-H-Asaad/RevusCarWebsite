@@ -1,5 +1,5 @@
 
-# Revus
+# REVUS
 
 The Responsive Revus Project is a web app highlighting modern automotive design and tech. It's crafted with HTML, CSS, TypeScript, Bootstrap, React, Git, and GitHub for a seamless experience on all devices. Users can easily explore car models and specs thanks to its sleek UI/UX design. Managed with Git and deployed on GitHub Pages for efficient development and accessibility.
 
