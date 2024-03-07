@@ -1,0 +1,44 @@
+.logo {
+	width: 100px;
+}
+.nav-link {
+	text-transform: uppercase;
+	color: #1c1f23 !important;
+	margin: 0 20px;
+	font-weight: 600 !important;
+	font-size: 13px !important;
+	transition: var(--main-transition) !important;
+}
+.phone {
+	border-right: 2px solid gray;
+	padding: 0 20px;
+	font-size: 24px;
+	color: var(--red-color);
+}
+.phone-number {
+	display: block;
+}
+.nav-link:hover {
+	color: var(--red-color) !important;
+	transition: var(--main-transition);
+}
+.navbar-toggler:focus,
+.navbar-toggler {
+	box-shadow: none !important;
+	border: none !important;
+	font-size: 16px !important;
+}
+
+@media (max-width: 991px) {
+	.navbar-nav {
+		text-align: center;
+	}
+	.nav-link {
+		padding: 15px 0 !important;
+		border-bottom: 1px solid #8080803b !important;
+	}
+	.nav-link:hover {
+		transform: translateX(5px);
+		transition: var(--main-transition);
+	}
+}

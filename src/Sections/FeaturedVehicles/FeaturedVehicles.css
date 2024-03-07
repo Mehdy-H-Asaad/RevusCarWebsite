@@ -1,0 +1,26 @@
+button.splide__arrow.splide__arrow--next {
+	position: absolute;
+	top: -30%;
+	border-radius: 0;
+	font-size: 20px;
+	right: 50px;
+}
+button.splide__arrow.splide__arrow--prev {
+	position: absolute;
+	top: -30%;
+	border-radius: 0;
+	right: 100px;
+	font-size: 20px;
+}
+.splide__arrow--prev {
+	left: unset;
+}
+.splide__arrow svg {
+	color: black;
+}
+.splide__arrow {
+	background-color: #fff;
+}
+ul.splide__pagination.splide__pagination--ltr {
+	bottom: -85px;
+}

@@ -1,0 +1,99 @@
+<OfferSection>
+				<Container>
+					<MainTitle
+						heading="Services We"
+						title="HELPS YOU TO FIND YOUR NEXT CAR EASILY"
+						textSpan="Offers"
+					/>
+					<CustomRow>
+						<CustomCol className="col-lg-2 col-md-4 col-sm-6">
+							<Box
+								className={toggle === 1 ? "active" : ""}
+								onClick={() => handleClick(1)}
+							>
+								<TbCheckupList className="icon" />
+								<H6>auto financing</H6>
+							</Box>
+						</CustomCol>
+						<CustomCol className="col-lg-2 col-md-4 col-sm-6 ">
+							<Box
+								onClick={() => handleClick(2)}
+								className={toggle === 2 ? "active" : ""}
+							>
+								<FaArrowsSpin className="icon" />
+								<H6>Vehicle Trade-In</H6>
+							</Box>
+						</CustomCol>
+						<CustomCol className="col-lg-2 col-md-4 col-sm-6">
+							<Box
+								className={toggle === 3 ? "active" : ""}
+								onClick={() => handleClick(3)}
+							>
+								<GiAutoRepair className="icon" />
+								<H6>Parts Repairing</H6>
+							</Box>
+						</CustomCol>
+						<CustomCol className="col-lg-2 col-md-4 col-sm-6">
+							<Box
+								className={toggle === 4 ? "active" : ""}
+								onClick={() => handleClick(4)}
+							>
+								<GrUserWorker className="icon" />
+								<H6>Car Inspection</H6>
+							</Box>
+						</CustomCol>
+						<CustomCol className="col-lg-2 col-md-4 col-sm-6">
+							<Box
+								className={toggle === 5 ? "active" : ""}
+								onClick={() => handleClick(5)}
+							>
+								<GrPaint className="icon" />
+								<H6>Auto Painting</H6>
+							</Box>
+						</CustomCol>
+					</CustomRow>
+					<CustomRow>
+						<CustomCol className="col-lg-5">
+							<img
+								src={toggle === 3 ? OffersData[1].image : Finance}
+								alt=""
+								className="img-fluid"
+							/>
+						</CustomCol>
+						<CustomCol className="col-lg-5">
+							<Info>
+								<Heading>auto financing</Heading>
+								<Paragh>
+									Morbi aliquam montes, volutpat semper pretium penatibus vel
+									varius scelerisque curabitur aptent tincidunt scelerisque
+									habitasse ultricies facilisi. Adipiscing nulla. Sollicitudin
+									turpis hymenaeos adipiscing
+								</Paragh>
+								<Paragh>
+									Volutpat maecenas sagittis molestie vivamus pretium vulputate
+									orci lorem cras, tempor commodo nibh euismod feugiat sociis
+									eros sagittis montes venenatis augue integer.
+								</Paragh>
+								<BenfitsBox>
+									<Benfits>
+										<FaCheck className="check-icon" />
+										<Span>Quick Set-up Facility</Span>
+									</Benfits>
+									<Benfits>
+										<FaCheck className="check-icon" />
+										<Span>Experienced Team</Span>
+									</Benfits>
+									<Benfits>
+										<FaCheck className="check-icon" />
+										<Span>Pay After Approval</Span>
+									</Benfits>
+									<Benfits>
+										<FaCheck className="check-icon" />
+										<Span>Bigger Fleet Capacity</Span>
+									</Benfits>
+								</BenfitsBox>
+							</Info>
+						</CustomCol>
+					</CustomRow>
+				</Container>
+			</OfferSection>
