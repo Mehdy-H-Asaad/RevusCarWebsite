@@ -19,7 +19,7 @@ https://mehdy-h-asaad.github.io/RevusCarWebsite/
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 
-## Landing Page
+## Home Page
 ![mehdy-h-asaad github io_RevusCarWebsite_ (1)](https://github.com/Mehdy-H-Asaad/RevusCarWebsite/assets/151958475/32ae9920-51ec-4256-9284-075a1b62fff7)
 
 
