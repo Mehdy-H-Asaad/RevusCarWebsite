@@ -1,21 +1,27 @@
+import { useEffect, Suspense, lazy } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
-import About from "../src/Pages/About";
-import Home from "../src/Pages/Home";
-import FeaturedVehiclesSection from "../src/Pages/FeaturedVehiclesSection";
-import ReviewsSection from "../src/Pages/ReviewsSection";
-import Contact from "../src/Pages/Contact";
-import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import CarInfo from "../src/Pages/CarInfo";
-import { carDataSection } from "../src/Data/CarData";
 import { CarContext } from "./Components/CustomContext/Context";
-import VehicleList from "../src/Pages/VehicleList";
+
+// CODE SPLITTING IMPLEMENTATION
+const Home = lazy(() => import("../src/Pages/Home"));
+const FeaturedVehiclesSection = lazy(
+	() => import("../src/Pages/FeaturedVehiclesSection")
+);
+const About = lazy(() => import("../src/Pages/About"));
+const ReviewsSection = lazy(() => import("../src/Pages/ReviewsSection"));
+const Contact = lazy(() => import("../src/Pages/Contact"));
+const CarInfo = lazy(() => import("../src/Pages/CarInfo"));
+const VehicleList = lazy(() => import("../src/Pages/VehicleList"));
+import { carDataSection } from "../src/Data/CarData";
+import { LoaderBar } from "./Components/GlobalComponents";
+
 function App() {
 	const ScrollToTop = () => {
 		const { pathname } = useLocation();
 
 		useEffect(() => {
-			ScrollToTop;
+			window.scrollTo(0, 0);
 		}, [pathname]);
 
 		return null;
@@ -25,15 +31,28 @@ function App() {
 		<HashRouter>
 			<ScrollToTop />
 			<CarContext.Provider value={carDataSection}>
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/featured-cars" element={<FeaturedVehiclesSection />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/reviews" element={<ReviewsSection />} />
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/car-info/:carId" element={<CarInfo />} />
-					<Route path="/carlist/:carName" element={<VehicleList />} />
-				</Routes>
+				<Suspense
+					fallback={
+						<div
+							style={{ display: "grid", placeItems: "center", height: "100vh" }}
+						>
+							<LoaderBar></LoaderBar>
+						</div>
+					}
+				>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route
+							path="/featured-cars"
+							element={<FeaturedVehiclesSection />}
+						/>
+						<Route path="/about" element={<About />} />
+						<Route path="/reviews" element={<ReviewsSection />} />
+						<Route path="/contact" element={<Contact />} />
+						<Route path="/car-info/:carId" element={<CarInfo />} />
+						<Route path="/carlist/:carName" element={<VehicleList />} />
+					</Routes>
+				</Suspense>
 			</CarContext.Provider>
 		</HashRouter>
 	);
