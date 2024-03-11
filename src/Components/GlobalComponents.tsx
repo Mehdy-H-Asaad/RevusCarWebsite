@@ -54,5 +54,24 @@ export const WelcomeBox = styled.div`
 		margin: 0 auto;
 	}
 `;
+export const LoaderBar = styled.div.attrs(() => ({
+	className: "loader",
+}))`
+	width: 5.4em;
+	height: 5.4em;
+	border: 0.4em solid rgb(84, 84, 84);
+	border-left-color: var(--red-color);
+	border-radius: 45%;
+	animation: spin 0.7s linear infinite;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+`;
 
 export default WelcomeBox;
